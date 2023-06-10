@@ -7,9 +7,10 @@
 :root {
     --color1: #000000;
     --color2: #ffffff;
-    --color3: #d02561;
+    --color3: #0bbcc4;
     --color4: #04091a;
     --color5: #707070;
+    --color6: #ed2b60;
 }
 
 body {
@@ -32,7 +33,7 @@ html {
 .btn {
     border: 0;
     padding: .5rem 1rem;
-    background: var(--color3);
+    background: var(--color6);
     cursor: pointer;
     transition: all .5s;
 }
@@ -104,7 +105,16 @@ a .btn {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    color: var(--color2);
+    color: var(--color3);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.hero .logo_2 {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: var(--color6);
     font-size: 2rem;
     font-weight: 700;
 }
@@ -147,7 +157,7 @@ a .btn {
 
 /* Discord */
 .discord {
-    background: var(--color2);
+    background: var(--color1);
     padding: 4rem 0;
     text-align: center;
 }
