@@ -62,4 +62,18 @@ window.onload = function() {
         console.log(`Portée(s) d'autorisation : ${scopes}`);
     }
 };
+fetch('/get_token', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ code: code }),
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
 
