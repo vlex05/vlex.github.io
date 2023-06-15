@@ -38,3 +38,28 @@ tl.from('.heroG .btn', {
 tl.to('.loading', {
     display: 'none'
 })
+
+// Dans app.js
+
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get('code');
+    const scopes = urlParams.get('scopes');
+    const state = urlParams.get('state');
+    const error = urlParams.get('error');
+    const error_description = urlParams.get('error_description');
+
+    // Valider le paramètre d'état ici pour empêcher les attaques CSRF
+
+    if (error) {
+        // Gérer l'erreur ici
+        console.log(`Erreur: ${error}`);
+        console.log(`Description de l'erreur : ${error_description}`);
+    } else {
+        // Ici, vous pouvez utiliser le 'code' pour obtenir un jeton d'accès
+        // et gérer les autorisations accordées par les 'scopes'
+        console.log(`Code d'autorisation : ${code}`);
+        console.log(`Portée(s) d'autorisation : ${scopes}`);
+    }
+};
+
